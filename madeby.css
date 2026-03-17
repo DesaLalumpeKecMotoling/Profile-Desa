@@ -1,0 +1,57 @@
+/* --- CSS Khusus Tim KKT --- */
+.kkt-section {
+    padding: 60px 20px;
+    background-color: #f4f7f6; /* Warna background lembut */
+}
+
+.kkt-grid {
+    display: grid;
+    /* Ini rahasianya agar responsif: otomatis menyesuaikan kolom dengan lebar minimal 220px */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.kkt-card {
+    background-color: #ffffff;
+    padding: 25px 15px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efek saat kartu disentuh/di-hover mouse */
+.kkt-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.kkt-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #3498db; /* Warna bingkai foto */
+    margin-bottom: 15px;
+}
+
+.kkt-name {
+    font-size: 1.2rem;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.kkt-role {
+    font-size: 0.95rem;
+    font-weight: bold;
+    color: #e67e22; /* Warna teks jabatan */
+    margin-bottom: 5px;
+}
+
+.kkt-major {
+    font-size: 0.85rem;
+    color: #7f8c8d;
+    font-style: italic;
+}
