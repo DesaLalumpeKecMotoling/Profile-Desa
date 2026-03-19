@@ -146,3 +146,93 @@ footer {
     color: #fff; 
     margin: 0 10px; 
 }
+/* Tambahan untuk Struktur Pimpinan */
+.pimpinan-grid {
+    justify-content: center; /* Memastikan 3 kartu utama berada di tengah */
+}
+
+.highlight-card {
+    border-top: 5px solid #e74c3c; /* Memberi garis warna merah di atas kartu pimpinan */
+    background-color: #fffdfd;
+}
+
+.highlight-card h3 {
+    font-size: 1.4em;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+/* Memastikan daftar list tidak ada bullet point default agar lebih rapi */
+.card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* --- Responsif: Tampilan Layar Kecil (Mobile / Tablet) --- */
+@media (max-width: 768px) {
+    /* 1. Menyesuaikan Header & Navigasi agar menyusun ke bawah */
+    header {
+        flex-direction: column;
+        padding: 15px 20px;
+        text-align: center;
+    }
+    
+    nav {
+        margin-top: 15px;
+        width: 100%;
+    }
+
+    nav ul {
+        flex-wrap: wrap; /* Agar menu turun ke baris baru jika layarnya terlalu kecil */
+        justify-content: center;
+        gap: 10px 20px;
+    }
+
+    /* 2. Mengecilkan ukuran Font pada Hero Section */
+    .hero {
+        padding: 60px 15px;
+    }
+
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    /* 3. Menyesuaikan ukuran judul section dan statistik */
+    .section-title {
+        font-size: 1.5em;
+        margin-bottom: 25px;
+    }
+
+    .stat-item h2 {
+        font-size: 2.2em;
+    }
+
+    .stat-item p {
+        font-size: 1em;
+    }
+
+    /* 4. Memaksa Grid menjadi 1 kolom penuh di mobile */
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* 5. Menyesuaikan Padding Container */
+    .container {
+        margin: 30px auto;
+        padding: 0 15px;
+    }
+}
+
+/* Tampilan untuk layar yang sangat kecil (HP jadul/sempit) */
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: column; /* Menu baris berbaris ke bawah */
+        gap: 10px;
+    }
+}
