@@ -1,0 +1,115 @@
+/* ============================================================
+   PERBAIKAN KHUSUS HALAMAN SEJARAH (sejarahdesa.html) 
+   ============================================================ */
+
+/* 1. Reset Header agar Konsisten dengan Index */
+header {
+    background-color: #fff;
+    padding: 15px 50px;
+    display: flex; /* Mengaktifkan baris horizontal */
+    justify-content: space-between; /* Logo kiri, Menu kanan */
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* 2. Hero Halaman Sejarah (Tampilan Banner) */
+.page-hero {
+    min-height: 50vh !important;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img/lalumpe1.jpg') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+}
+
+.page-hero h1 {
+    color: white;
+    font-size: 3em;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    margin-bottom: 10px;
+}
+
+/* 3. Kotak Konten Sejarah (Floating Box) */
+.history-content {
+    background: white;
+    max-width: 900px; /* MEMBATASI LEBAR AGAR RAPI */
+    margin: -80px auto 60px auto; /* Membuat kotak naik menimpa banner & rata tengah */
+    padding: 60px; /* Memberi ruang di dalam kotak agar teks tidak menempel ke pinggir */
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 10;
+}
+
+/* 4. Tipografi Sejarah */
+.history-content h2 {
+    color: #e74c3c;
+    border-left: 6px solid #e74c3c;
+    padding-left: 20px;
+    margin-top: 50px;
+    margin-bottom: 25px;
+    font-size: 2em;
+}
+
+.history-content p {
+    font-size: 1.15em;
+    color: #444;
+    text-align: justify; /* Membuat teks rata kiri-kanan seperti buku */
+    line-height: 1.9; /* Memberi jarak antar baris agar nyaman dibaca */
+    margin-bottom: 30px;
+}
+
+/* 5. Highlight Nama Tokoh & Tahun */
+.history-content strong {
+    color: #e74c3c;
+    background: #fff5f5;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 700;
+}
+
+/* 6. Tombol Kembali yang Unik */
+.btn-back {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 40px;
+    background: #2c3e50;
+    color: white !important;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.4s ease;
+}
+
+.btn-back:hover {
+    background: #e74c3c;
+    transform: translateX(-15px); /* Efek bergeser saat kursor menempel */
+    box-shadow: 0 10px 20px rgba(231, 76, 60, 0.3);
+}
+
+/* --- Perbaikan untuk Tampilan HP --- */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 20px;
+        flex-direction: column; /* Menu turun ke bawah di HP */
+    }
+    
+    .history-content {
+        padding: 30px 20px;
+        margin: -40px 15px 40px 15px; /* Memberi jarak aman di layar sempit */
+    }
+    
+    .history-content h2 {
+        font-size: 1.6em;
+    }
+
+    .page-hero h1 {
+        font-size: 2.2em;
+    }
+}

@@ -5,41 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Berita Terkini - Desa Lalumpe</title>
     <link rel="stylesheet" href="beritadesa.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <section class="hero-small">
-        <h1>Berita Desa Terkini</h1>
-        <p>Informasi terbaru seputar kegiatan dan perkembangan Desa Lalumpe</p>
+        <div class="hero-overlay">
+            <h1>Berita Desa Terkini</h1>
+            <p>Informasi terbaru seputar kegiatan dan perkembangan Desa Lalumpe</p>
+        </div>
     </section>
 
-    <section class="container">
-        <div class="grid">
-            <div class="card news-item">
-                <img src="img/lalumpe1.jpg" alt="Kegiatan Desa" class="news-img">
+    <main class="container">
+        <div class="news-grid">
+            <article class="news-card">
+                <div class="news-img-wrapper">
+                    <img src="img/lalumpe1.jpg" alt="Kegiatan Desa">
+                    <span class="category">Pembangunan</span>
+                </div>
                 <div class="news-body">
                     <span class="date">21 Maret 2026</span>
-                    <h3>Penyaluran Bantuan Sembako Tahap 1</h3>
-                    <p>Pemerintah Desa Lalumpe mulai mendistribusikan bantuan paket pangan kepada warga yang membutuhkan...</p>
-                    <a href="#" class="read-more">Selengkapnya</a>
+                    <h3>Pemasangan penunjuk jalan bersama dengan mahasiswa KKT 146 Unsrat</h3>
+                    <p>Desa Lalumpe bekerja sama dengan mahasiswa KKT 146 Unsrat untuk memasang penunjuk jalan di wilayah desa...</p>
+                    <a href="#" class="read-more">Baca Selengkapnya →</a>
                 </div>
-            </div>
+            </article>
 
-            <div class="card news-item">
-                <img src="img/lalumpe2.jpg" alt="Rapat Desa" class="news-img">
-                <div class="news-body">
-                    <span class="date">18 Maret 2026</span>
-                    <h3>Musyawarah Perencanaan Pembangunan (Musrenbang)</h3>
-                    <p>Warga berkumpul di Balai Desa untuk merumuskan prioritas pembangunan infrastruktur tahun anggaran 2027...</p>
-                    <a href="#" class="read-more">Selengkapnya</a>
+            <article class="news-card">
+                <div class="news-img-wrapper">
+                    <img src="img/lalumpe2.jpg" alt="Rapat Desa">
+                    <span class="category">Sosial</span>
                 </div>
-            </div>
+                <div class="news-body">
+                    <span class="date">16 Maret 2026</span>
+                    <h3>Kerja bakti bersama</h3>
+                    <p>Warga desa Lalumpe mengadakan kegiatan kerja bakti bersama untuk membersihkan jalan masuk menuju desa </p>
+                    <a href="#" class="read-more">Baca Selengkapnya →</a>
+                </div>
+            </article>
         </div>
         
-        <div style="text-align: center; margin-top: 40px;">
-            <a href="index.html" class="read-more">← Kembali ke Beranda</a>
+        <div class="back-home">
+            <a href="index.html" class="btn-outline">Kembali ke Beranda</a>
         </div>
-    </section>
+    </main>
 
     <footer>
         <p>&copy; 2026 Pemerintah Desa Lalumpe. Semua hak dilindungi.</p>
