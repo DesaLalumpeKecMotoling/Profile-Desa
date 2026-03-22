@@ -232,62 +232,76 @@ footer {
 }
 
 /* =========================================
-   RESPONSIF - Penyesuaian untuk Layar Mobile
+   RESPONSIF - Tampilan Mobile (Skala Desktop)
    ========================================= */
 @media (max-width: 768px) {
-    /* Header & Navigasi */
+    /* --- Navigasi Mobile --- */
     header {
-        flex-direction: column;
-        padding: 15px 20px;
+        padding: 10px 15px; 
+        flex-direction: row; 
     }
-    nav { 
-        margin-top: 15px; 
+    .menu-toggle { display: flex; }
+    .nav-menu {
+        position: absolute;
+        top: 50px; 
+        left: -100%; 
         width: 100%;
+        background-color: #fff;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        transition: left 0.3s ease; 
     }
-    nav ul { 
-        gap: 15px; 
-        justify-content: center; 
-        flex-wrap: wrap; /* Mencegah menu terpotong */
-    }
-
-    /* Hero Section (Banner Utama) */
-    .hero { 
-        padding: 40px 15px; 
-        min-height: 40vh; /* Mengurangi ruang kosong di HP */
-    }
-    .hero h1 { 
-        font-size: 2.2em; /* Mengecilkan teks judul utama */
-    }
-    .hero p { 
-        font-size: 1.1em; 
-    }
-
-    /* Container & Judul Bagian */
-    .container {
-        margin: 30px auto; /* Mengurangi margin antar section */
-    }
-    .section-title {
-        font-size: 1.6em;
-        margin-bottom: 25px;
-    }
-
-    /* Grid & Kartu */
-    .grid { 
-        grid-template-columns: 1fr; /* Memaksa semua kartu menjadi 1 kolom sejajar ke bawah */
+    .nav-menu.active { left: 0; }
+    .nav-menu ul {
+        flex-direction: column; 
+        text-align: center;
+        padding: 15px 0;
         gap: 15px;
     }
-    .pimpinan-grid {
-        flex-direction: column; /* Mengubah baris pimpinan menjadi kolom */
+
+    /* --- Hero Section (Skala Diperkecil) --- */
+    .hero { 
+        padding: 30px 10px; 
+        min-height: 35vh; 
     }
-    .pimpinan-grid .card {
-        min-width: 100%; /* Mencegah kartu pimpinan bocor keluar layar */
+    .hero h1 { font-size: 1.8em; margin-bottom: 5px; }
+    .hero p { font-size: 0.9em; }
+
+    /* --- Container & Judul --- */
+    .container { margin: 25px auto; padding: 0 10px; }
+    .section-title { font-size: 1.3em; margin-bottom: 20px; }
+
+    /* --- MEMAKSA GRID TETAP SEJAJAR SEPERTI DESKTOP --- */
+    /* Informasi, KAUR, KASI, dan Jaga dipaksa menjadi 3 kolom */
+    .grid { 
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 8px; /* Jarak antar kartu dikecilkan */
     }
 
-    /* Statistik */
-    .stats {
-        padding: 30px 15px;
+    /* Khusus Pimpinan (Hukum Tua & Sekdes) dipaksa 2 kolom */
+    .pimpinan-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
     }
-    .stat-item h2 {
-        font-size: 2.5em; /* Mengecilkan angka agar pas di layar */
+    
+    /* Menghapus batas lebar minimal agar bisa mengecil */
+    .pimpinan-grid .card { min-width: 0; flex: none; }
+
+    /* --- Skala Kartu dan Teks (Dikecilkan agar muat) --- */
+    .card {
+        padding: 10px 5px; /* Bantalan dalam kartu dikecilkan */
+        border-radius: 5px;
     }
+    .card h3 { font-size: 0.85em; }
+    .card h4 { font-size: 0.75em; }
+    .card p { font-size: 0.65em; line-height: 1.3; }
+    .read-more { font-size: 0.65em; margin-top: 5px; }
+
+    /* --- Statistik Tetap 3 Kolom --- */
+    .stats { padding: 20px 10px; }
+    .stat-item h2 { font-size: 1.6em; }
+    .stat-item p { font-size: 0.75em; }
+
+    /* --- Footer --- */
+    footer { padding: 20px 10px; margin-top: 30px; font-size: 0.8em; }
 }
