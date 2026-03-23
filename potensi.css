@@ -132,12 +132,81 @@ footer {
     padding: 40px 0;
 }
 
-/* Responsive */
+/* --- Perbaikan Mobile Responsive --- */
 @media (max-width: 768px) {
-    .potensi-item, .potensi-item.reverse {
-        flex-direction: column;
-        gap: 30px;
+    /* 1. Header & Navigasi */
+    header {
+        padding: 15px 20px;
+        flex-direction: column; /* Nama desa di atas, menu di bawah */
+        gap: 10px;
+        text-align: center;
     }
-    .potensi-img { height: 250px; width: 100%; }
-    .hero-content h1 { font-size: 2rem; }
+
+    header nav ul {
+        justify-content: center;
+        margin-top: 5px;
+    }
+
+    header nav ul li {
+        margin: 0 10px; /* Jarak menu lebih rapat di HP */
+    }
+
+    /* 2. Hero Section */
+    .hero-potensi {
+        height: 350px; /* Lebih pendek sedikit agar tidak menutupi layar HP */
+        padding: 0 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem; /* Font lebih proporsional untuk HP */
+    }
+
+    .hero-content p {
+        font-size: 0.95rem;
+    }
+
+    /* 3. Potensi Items (Zig-zag ke Stacked) */
+    .container {
+        margin: 40px auto; /* Jarak atas-bawah dikurangi */
+    }
+
+    .potensi-item, .potensi-item.reverse {
+        flex-direction: column; /* Semua gambar jadi di atas teks */
+        gap: 20px;
+        margin-bottom: 60px; /* Jarak antar item dipersempit */
+    }
+
+    .potensi-img {
+        height: 250px; 
+        width: 100%;
+        border-radius: 15px; /* Radius lebih kecil agar serasi */
+    }
+
+    /* 4. Tipografi Mobile */
+    .potensi-text {
+        text-align: center; /* Rata tengah agar lebih manis di layar kecil */
+        padding: 0 10px;
+    }
+
+    .potensi-text h2 {
+        font-size: 1.6rem;
+        margin-bottom: 15px;
+    }
+
+    .potensi-text p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .tag {
+        font-size: 0.75rem;
+        padding: 4px 12px;
+    }
+
+    /* 5. Button */
+    .btn-primary {
+        width: 100%; /* Tombol memenuhi lebar layar agar mudah diklik jempol */
+        display: block;
+        padding: 12px 20px;
+    }
 }

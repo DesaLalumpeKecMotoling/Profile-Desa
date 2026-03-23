@@ -1,0 +1,114 @@
+/* --- OPTIMASI KHUSUS MOBILE (Screen < 768px) --- */
+@media (max-width: 768px) {
+    
+    /* 1. Navigasi Header */
+    header {
+        padding: 15px 10px;
+        flex-direction: column; 
+        gap: 12px;
+        text-align: center;
+    }
+
+    header nav ul {
+        display: flex;         /* Memastikan menu tetap berjejer */
+        list-style: none;      /* Menghilangkan bullet points */
+        justify-content: center;
+        gap: 12px; 
+        padding: 0;
+        flex-wrap: wrap;       /* Agar menu turun rapi jika terlalu banyak */
+    }
+
+    header nav ul li {
+        margin: 0;             /* Reset margin */
+    }
+
+    header nav ul li a {
+        font-size: 0.85rem;
+        font-weight: 600;
+        text-decoration: none;
+        color: #333;
+    }
+
+    /* 2. Container & Tipografi */
+    .container {
+        margin: 15px auto;
+        padding: 0 15px;
+    }
+
+    .article-header {
+        margin-bottom: 20px;
+    }
+
+    .article-header h1 {
+        font-size: 1.6rem;    /* Sedikit diperkecil agar tidak terlalu dominan */
+        line-height: 1.3;
+        margin-top: 10px;
+        word-wrap: break-word; /* Mencegah kata panjang merusak layout */
+    }
+
+    /* 3. Galeri Foto Mobile */
+    .photo-gallery {
+        grid-template-columns: 1fr; 
+        gap: 20px; 
+    }
+
+    .photo-gallery figure {
+        margin: 0;             /* Reset margin figure */
+    }
+
+    .photo-gallery figure img {
+        height: auto;          /* Mengikuti proporsi asli gambar */
+        max-height: 250px;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 12px;
+    }
+
+    .photo-gallery figcaption {
+        font-size: 0.8rem;
+        padding: 8px 5px;
+        line-height: 1.4;
+        color: #666;
+    }
+
+    /* 4. Isi Konten */
+    .article-content p {
+        font-size: 1rem; 
+        text-align: left;      /* Rata kiri lebih nyaman di layar sempit */
+        margin-bottom: 15px;
+        line-height: 1.7;
+    }
+
+    blockquote {
+        margin: 25px 5px;
+        padding: 15px;
+        border-left: 4px solid #e74c3c; /* Memberi aksen warna pada kutipan */
+        background: #fdf2f2;
+        font-size: 1.05rem;
+        border-radius: 0 8px 8px 0;
+    }
+
+    /* 5. Tombol Kembali */
+    .back-action {
+        text-align: center;
+        margin-top: 30px;
+        padding-bottom: 30px; /* Jarak ekstra di bawah */
+    }
+
+    .btn-back {
+        display: block;
+        background: #2c3e50;    /* Warna yang lebih tegas */
+        color: #ffffff !important;
+        padding: 14px 20px;
+        border-radius: 10px;
+        width: 100%; 
+        text-decoration: none;
+        font-weight: 700;
+        transition: transform 0.2s ease;
+    }
+
+    .btn-back:active {
+        transform: scale(0.98); /* Efek membal saat ditekan */
+        background: #1a252f;
+    }
+}
